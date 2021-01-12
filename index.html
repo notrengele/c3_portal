@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/transparent-bulls-projekte-128x128.png" type="image/x-icon">
+  <meta name="description" content="Created by: RENGELE">
+  <title>C3.RS Community</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link href="assets/pointer.css" rel="stylesheet">
+  <body oncontextmenu="return false;">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/130527/h5ab-snow-flurry.js"></script>
+  <script>
+    jQuery(document).ready(function($){
+    $(document).snowFlurry({
+    maxSize: 5,
+    numberOfFlakes: 50,
+    minSpeed: 10,
+    maxSpeed: 15,
+    color: '#db5707',
+    timeout: 0
+    });
+    });
+  </script>
+  <style>
+  .sf-snow-flake {
+  position: fixed;
+  top: -20px;
+  z-index: 99999;
+  }
+  .sf-snow-anim {
+  top: 110%;
+  }
+  </style>
+</head>
+<!-- SECURITY START BY RENGELE-->
+<script language="javascript">
+  document.onmousedown=disableclick;
+  status="NEMERE RETARDE";
+  Function disableclick(e)
+  {
+    if(event.button==2)
+     {
+       alert(status);
+       return false;  
+     }
+  }
+</script>
+<script>
+  $(document).on({
+    "contextmenu": function(e) {
+        console.log("ctx menu button:", e.which); 
+
+        // Stop the context menu
+        e.preventDefault();
+    },
+    "mousedown": function(e) { 
+        console.log("normal mouse down:", e.which); 
+    },
+    "mouseup": function(e) { 
+        console.log("normal mouse up:", e.which); 
+    }
+});
+</script>
+<script>
+      $(function() {
+        $(this).bind("contextmenu", function(e) {
+            e.preventDefault();
+        });
+    }); 
+</script>
+<script>
+  document.addEventListener("contextmenu", function(e){
+    if (e.target.nodeName === "IMG") {
+        e.preventDefault();
+    }
+}, false);
+</script>
+<script>
+  $(document).on("contextmenu",function(e){
+
+     if( e.button == 2 ) {
+         e.preventDefault();
+          callYourownFucntionOrCodeHere();
+     }
+return true;
+});
+</script>
+<script type="text/javascript"> 
+  function disableselect(e){  
+  return false  
+  }  
+
+  function reEnable(){  
+  return true  
+  }  
+
+  //if IE4+  
+  document.onselectstart=new Function ("return false")  
+  document.oncontextmenu=new Function ("return false")  
+  //if NS6  
+  if (window.sidebar){  
+  document.onmousedown=disableselect  
+  document.onclick=reEnable  
+  }
+</script>
+<script>
+  jQuery(document).ready(function(){
+  jQuery(function() {
+        jQuery(this).bind("contextmenu", function(event) {
+            event.preventDefault();
+            alert('Right click disable in this site!!')
+        });
+    });
+});
+</script>
+<script>
+          window.oncontextmenu = function () {
+            console.log("Right Click Disabled");
+            return false;
+        }
+</script>
+<script language=JavaScript>
+//Disable right mouse click Script
+
+  var message="Function Disabled!";
+
+  function clickIE4(){
+  if (event.button==2){
+  alert(message);
+  return false;
+   }
+  }
+
+  function clickNS4(e){
+  if (document.layers||document.getElementById&&!document.all){
+  if (e.which==2||e.which==3){
+  alert(message);
+  return false;
+  }
+  }
+  }
+
+  if (document.layers){
+  document.captureEvents(Event.MOUSEDOWN);
+  document.onmousedown=clickNS4;
+  }
+  else if (document.all&&!document.getElementById){
+  document.onmousedown=clickIE4;
+  }
+
+  document.oncontextmenu=new Function("alert(message);return false")
+
+</script>
+<script>
+  $("html").on("contextmenu",function(e){
+   return false;
+});
+</script>
+<script>
+   $(document).ready(function () {
+            document.oncontextmenu = document.body.oncontextmenu = function () { return false; }
+        });
+</script>
+<script>
+  function prevententer () {
+ if(event.keyCode == 13) {
+  return false;
+ }
+}
+event.button == 2
+</script>
+<script>
+      jQuery(document).ready(function() {
+    function disableSelection(e) {
+        if (typeof e.onselectstart != "undefined") e.onselectstart = function() {
+            return false
+        };
+        else if (typeof e.style.MozUserSelect != "undefined") e.style.MozUserSelect = "none";
+        else e.onmousedown = function() {
+            return false
+        };
+        e.style.cursor = "default"
+    }
+    window.onload = function() {
+        disableSelection(document.body)
+    };
+
+    window.addEventListener("keydown", function(e) {
+        if (e.ctrlKey && (e.which == 65 || e.which == 66 || e.which == 67 || e.which == 70 || e.which == 73 || e.which == 80 || e.which == 83 || e.which == 85 || e.which == 86)) {
+            e.preventDefault()
+        }
+    });
+    document.keypress = function(e) {
+        if (e.ctrlKey && (e.which == 65 || e.which == 66 || e.which == 70 || e.which == 67 || e.which == 73 || e.which == 80 || e.which == 83 || e.which == 85 || e.which == 86)) {}
+        return false
+    };
+
+    document.onkeydown = function(e) {
+        e = e || window.event;
+        if (e.keyCode == 123 || e.keyCode == 18) {
+            return false
+        }
+    };
+
+    document.oncontextmenu = function(e) {
+        var t = e || window.event;
+        var n = t.target || t.srcElement;
+        if (n.nodeName != "A") return false
+    };
+    document.ondragstart = function() {
+        return false
+    };
+});
+</script>
+<script>
+  document.getElementsByTagName("html")[0].setAttribute("oncontextmenu", "return false"); 
+</script>
+<script>
+  // Vanilla JS way
+document.addEventListener('contextmenu', function(e){
+    e.preventDefault();
+});
+
+// jQuery way
+$(document).bind('contextmenu', function(e) {
+    e.preventDefault();
+});
+</script>
+<script>
+  document.onmousedown = rightclickD;
+            function rightclickD(e) 
+            { 
+                e = e||event;
+                console.log(e);
+                if (e.button == 2) {
+                //alert('Right click disabled!!!'); 
+                 return false; }
+            }
+</script>
+<!-- HTTP TEST -->
+  <script language="javascript">
+  <!--
+    document.write('<a h' + 're' + 'f="');
+    document.write('bigfile' + '.' + 'zip">');
+  // -->
+  </script>
+  </a>
+<script>
+  RewriteCond %{HTTP_USER_AGENT} ^HTTrack [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^SiteSucker [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebZip [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebCopier [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Zeus
+  RewriteRule ^.*$ no_download.html [L]
+</script>
+<script>
+  User-agent: AhrefsBot
+  User-agent: Baiduspider
+  User-agent: EasouSpider
+  User-agent: Ezooms
+  User-agent: YandexBot
+  User-agent: MJ12bot
+  User-agent: SiteSucker
+  User-agent: HTTrack
+  Disallow: /
+</script>
+<script>
+  RewriteEngine on
+  RewriteBase /
+  RewriteCond %{HTTP_USER_AGENT} almaden [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Anarchie [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^ASPSeek [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^attach [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^autoemailspider [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^BackWeb [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Bandit [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^BatchFTP [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot@yahoo.com [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Buddy [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^bumblebee [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^CherryPicker [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^CICC [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Collector [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Copier [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Crescent [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Custo [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^DA [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^DIIbot [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^DISCo [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^DISCo\ Pump [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Download\ Demon [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Download\ Wonder [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Downloader [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Drip [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^DSurf15a [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^eCatch [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^EasyDL/2.99 [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^EirGrabber [OR]
+  RewriteCond %{HTTP_USER_AGENT} email [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} ^EmailCollector [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^EmailSiphon [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^EmailWolf [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Express\ WebPictures [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^ExtractorPro [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^EyeNetIE [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^FileHound [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^FlashGet [OR]
+  RewriteCond %{HTTP_USER_AGENT} FrontPage [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} ^GetRight [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^GetSmart [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^GetWeb! [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^gigabaz [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Go\!Zilla [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Go!Zilla [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Go-Ahead-Got-It [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^gotit [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Grabber [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^GrabNet [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Grafula [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^grub-client [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^HMView [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^HTTrack [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^httpdown [OR]
+  RewriteCond %{HTTP_USER_AGENT} .*httrack.* [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} ^ia_archiver [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Image\ Stripper [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Image\ Sucker [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Indy*Library [OR]
+  RewriteCond %{HTTP_USER_AGENT} Indy\ Library [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} ^InterGET [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^InternetLinkagent [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Internet\ Ninja [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^InternetSeer.com [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Iria [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^JBH*agent [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^JetCar [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^JOC\ Web\ Spider [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^JustView [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^larbin [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^LeechFTP [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^LexiBot [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^lftp [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Link*Sleuth [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^likse [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Link [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^LinkWalker [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Mag-Net [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Magnet [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Mass\ Downloader [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Memo [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Microsoft.URL [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^MIDown\ tool [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Mirror [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Mister\ PiX [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Mozilla.*Indy [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Mozilla.*NEWT [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Mozilla*MSIECrawler [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^MS\ FrontPage* [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^MSFrontPage [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^MSIECrawler [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^MSProxy [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Navroad [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^NearSite [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^NetAnts [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^NetMechanic [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^NetSpider [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Net\ Vampire [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^NetZIP [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^NICErsPRO [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Ninja [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Octopus [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Offline\ Explorer [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Offline\ Navigator [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Openfind [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^PageGrabber [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Papa\ Foto [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^pavuk [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^pcBrowser [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Ping [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^PingALink [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Pockey [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^psbot [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Pump [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^QRVA [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^RealDownload [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Reaper [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Recorder [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^ReGet [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Scooter [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Seeker [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Siphon [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^sitecheck.internetseer.com [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^SiteSnagger [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^SlySearch [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^SmartDownload [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Snake [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^SpaceBison [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^sproose [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Stripper [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Sucker [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^SuperBot [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^SuperHTTP [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Surfbot [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Szukacz [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^tAkeOut [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Teleport\ Pro [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^URLSpiderPro [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Vacuum [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^VoidEYE [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Web\ Image\ Collector [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Web\ Sucker [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebAuto [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^[Ww]eb[Bb]andit [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^webcollage [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebCopier [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Web\ Downloader [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebEMailExtrac.* [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebFetch [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebGo\ IS [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebHook [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebLeacher [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebMiner [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebMirror [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebReaper [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebSauger [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Website [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Website\ eXtractor [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Website\ Quester [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Webster [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebStripper [OR]
+  RewriteCond %{HTTP_USER_AGENT} WebWhacker [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WebZIP [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Wget [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Whacker [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Widow [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^WWWOFFLE [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^x-Tractor [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Xenu [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Zeus.*Webster [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^Zeus
+  RewriteRule ^.* – [F,L]
+</script>
+<!-- SECURITY END -->
+<body>
+  
+  <section class="header4 cid-saSwcZTGk9 mbr-fullscreen mbr-parallax-background" id="header4-0">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(0, 0, 0);">
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="mbr-white col-md-12 col-lg-6">
+                <div class="typed-text pb-3 align-left display-1">
+                    <span class="mbr-section-subtitle mbr-fonts-style display-1">
+                          C3.RS Community<br></span>
+                    <span>
+                      <span class="animated-element mbr-bold" data-word1="Dobro dosli" data-word2="C3.RS Gaming Community" data-word3="Free Channel" data-word4="Full Anti DDoS" data-word5="Ranksystem" data-speed="50" data-words="5">
+                      </span>
+                    </span>
+                </div>
+                <p class="mbr-section-text mbr-fonts-style align-left display-5">
+                    <br><strong><em>Owners:</em></strong><br>Djomla & Gohard<br><br><strong><em>Community Managers:</em></strong><br>RENGELE, Zlaja, Aezakmi, Wasic<br> 
+                </p>
+                <div class="pt-3 mbr-section-btn align-left"><a class="btn btn-md btn-danger display-4" type="submit" href="ts3server://5.254.86.181?port=9987" target="_blank">&nbsp; TeamSpeak 3 Connect &nbsp;&nbsp;</a> <a class="btn btn-md btn-danger display-4" type="submit" href="https://c3.rs/forum" target="_blank">&nbsp; Forum Connect &nbsp;</a> <a class="btn btn-md btn-danger display-4" type="submit" href="https://www.gametracker.rs/server_info/185.119.89.101:27045/" target="_blank">CS 1.6 Connect</a> <a class="btn btn-md btn-danger display-4" type="submit" href="https://www.facebook.com/c3.rsteamspeak/">Facebook</a></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mbr-figure">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+</section>
+
+
+<script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/typed/typed.min.js"></script>
+  <script src="assets/parallax/jarallax.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <link href="assets/theme/css/nanoscroller.css" rel="stylesheet">
+  <script src="assets/pointer.js"></script>
+          <script>
+        init_pointer({
+            
+        })
+    </script>
+</body>
+
+</html>
